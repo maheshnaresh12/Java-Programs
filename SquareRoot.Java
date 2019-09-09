@@ -8,6 +8,7 @@ public class SquareRoot {
 		
 		if(mid*mid == n) {
 			System.out.println(mid) ;
+			break;
 		}
 		
 		 if(mid*mid > n) {
