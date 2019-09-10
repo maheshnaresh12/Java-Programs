@@ -79,6 +79,7 @@ public class LinkedListImplementation {
 	}
 	
 	temp.next = null;
+		tail = temp;
 	
 		}
 		
