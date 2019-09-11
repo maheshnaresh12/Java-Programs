@@ -27,14 +27,18 @@ public class StackImplementation {
 		}
 	
 	// Removing an element from the stack
-	public void pop() {
+	public int pop() {
 		
 		if(top == null) {
 			
-			return;
+			return 0;
 		}
 		
+		int temp = top.data;
+		
 		top = top.next;
+		
+		return temp;
 		
 	}
 	
@@ -55,10 +59,10 @@ public class StackImplementation {
 		stack.push(4);
 		stack.push(5);
 		stack.peek();
-		stack.pop();
+		System.out.println(stack.pop());
 		stack.peek();
-		stack.pop();
-		stack.pop();
+		System.out.println(stack.pop());
+		System.out.println(stack.pop());
 		stack.peek();
 		
 	}
