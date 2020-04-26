@@ -1,0 +1,72 @@
+import java.util.*;
+
+class Main {
+
+    String [] studentList = new String[100];
+    int studentCount;
+  public void studentRegistration(String studentName){
+
+
+       studentList[studentCount] = studentName;
+       studentCount++;
+
+  }
+
+  public void StudentDeletion(String studentName){
+
+     for(int i=0;i<studentCount;i++){
+       if(studentList[i].equals(studentName)){
+            studentList[i] = null;
+       return;
+       }
+       
+     }
+  
+          System.out.println("Student Not Found");
+      
+
+  }
+
+  public static void main(String[] args) {
+
+    Main studentManagament = new Main();
+    int i = 0;
+do {
+    System.out.println("Menu:");
+    System.out.println("1.Register a New Student:");
+    System.out.println("2.Delete Existing Student:");
+    System.out.println("3.View Students List:");
+    System.out.println("4.Exit:");
+
+
+    Scanner sc = new Scanner(System.in);
+    i = sc.nextInt();
+    if(i==1){
+      System.out.println("Enter Student Name:");
+      Scanner student = new Scanner(System.in);
+         String input = sc.next();
+         studentManagament.studentRegistration(input);
+      System.out.println("Registration Successful");
+    }
+     if(i==2){
+      System.out.println("Enter Student Name:");
+      Scanner student = new Scanner(System.in);
+         String input = sc.next();
+         studentManagament.StudentDeletion(input);
+    }
+     if(i==3){
+       System.out.println("List of Students:");
+       for(int j=0;j<studentManagament.studentCount;j++){
+         System.out.println(studentManagament.studentList[j]);
+       }
+      
+    }
+     
+}
+while (i!=4);
+    
+
+
+
+  }
+}
